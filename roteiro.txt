@@ -1,0 +1,20 @@
+- cria rep no github
+- clone rep para pasta local
+- pip install flask torch numpy
+- cria app.py --> hello world do flask
+- criar pasta template e add index.html
+- altera a def hello_world para render_template('index.html')
+- tentar enviar os dados para visualizar a rota /predict
+- adicionar os imports 
+from flask import Flask, request, render_template  
+import torch  
+- salva o modelo como encriptado
+model_scripted = torch.jit.script(modelo) # Export to TorchScript
+model_scripted.save('model_scripted.pt') # Save
+- carregar o modelo encriptado
+modelo = torch.jit.load('path/to/model.pth')
+modelo.eval()
+- inserir a função def predict()
+- criar o results.html
+
+
